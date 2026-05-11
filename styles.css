@@ -421,7 +421,46 @@ section {
     color: var(--text-secondary);
 }
 
-/* Thêm vào styles.css */
+/* Achievement List Styles */
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.achievement-item:hover {
+    background: rgba(236, 72, 153, 0.08);
+    border-color: var(--accent-color);
+    transform: translateX(8px);
+}
+
+.achievement-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+.achievement-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
 
 .achievement-list {
     list-style: none;
@@ -1038,6 +1077,22 @@ section {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .timeline-detail-modal .modal-content,
+    .modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-detail-modal .modal-image-wrapper {
+        order: 0;
+    }
+
+    .modal-role {
+        margin-top: 16px;
+        padding: 12px;
+    }
+}
+
 .footer {
     background: var(--bg-secondary);
     padding: 40px 20px;
@@ -1153,6 +1208,7 @@ section {
 
     .skills-grid,
     .achievements-grid,
+    .achievements-list,
     .projects-grid,
     .interests-grid {
         grid-template-columns: 1fr;
@@ -1261,6 +1317,24 @@ section {
 
     .interest-icon {
         font-size: 2rem;
+    }
+
+    .modal {
+        padding: 16px;
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px 16px;
+    }
+
+    .modal-image-wrapper {
+        height: 250px;
+    }
+
+    .modal-info h2 {
+        font-size: 1.4rem;
     }
 
     .contact-form-wrapper {
