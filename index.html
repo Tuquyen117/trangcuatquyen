@@ -177,7 +177,7 @@
         </section>
 
         <!-- Research Section -->
-        <section class="research" id="research">
+       <section class="research" id="research">
             <div class="container">
                 <h2 class="section-title">Hành Trình</h2>
                 <div class="timeline">
@@ -185,7 +185,7 @@
                     <div class="timeline-year">
                         <h3 class="timeline-year-title">2020</h3>
                         <div class="timeline-items">
-                            <div class="timeline-item" data-timeline="2020">
+                            <div class="timeline-item" data-timeline="2020" onclick="openTimelineModal('2020')">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h4>Phát Triển Công Cụ Thiết Kế Tự Động</h4>
@@ -200,7 +200,7 @@
                     <div class="timeline-year">
                         <h3 class="timeline-year-title">2023</h3>
                         <div class="timeline-items">
-                            <div class="timeline-item" data-timeline="2023">
+                            <div class="timeline-item" data-timeline="2023" onclick="openTimelineModal('2023')">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h4>Mô Phỏng 2D Công Nghệ AI</h4>
@@ -215,7 +215,7 @@
                     <div class="timeline-year">
                         <h3 class="timeline-year-title">2025</h3>
                         <div class="timeline-items">
-                            <div class="timeline-item" data-timeline="2025">
+                            <div class="timeline-item" data-timeline="2025" onclick="openTimelineModal('2025')">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h4>Ứng Dụng AI trong Thiết Kế Đồ Họa Hiện Đại</h4>
@@ -229,7 +229,9 @@
             </div>
         </section>
 
-        <!-- Interests Section -->
+        <!-- ...existing code... -->
+
+        <!-- sở thích -->
         <section class="interests" id="interests">
             <div class="container">
                 <h2 class="section-title">Sở Thích & Đam Mê</h2>
@@ -436,7 +438,7 @@
             }
         });
 
-        // Contact Form Handling
+        // thông tin liên hệ
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
