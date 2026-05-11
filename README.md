@@ -222,7 +222,7 @@ Tự do sử dụng cho mục đích cá nhân và thương mại.
 
 ---
 
-**Xây dựng bởi**: Chuyên gia UI/UX
+**Xây dựng bởi**:  UI/UX
 **Ngày tạo**: 2024
 **Phiên bản**: 2.0 (với Apple-style animations)
 **Last Updated**: May 5, 2026
