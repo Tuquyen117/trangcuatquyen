@@ -29,6 +29,7 @@
 - **Light Theme**: #ec4899 (Hồng sáng)
 - **Dark Theme**: #f472b6 (Hồng nhẹ nhàng)
 - Gradient tuyệt đẹp từ hồng đậm đến hồng nhạt
+- Những cơn mưa hình tròn màu trắng chuyển động xuyên web
 
 ### 🎪 Interactive Modals
 - **Dự Án Chính**: Click vào dự án để xem chi tiết, thông tin và hình ảnh được hiển thị ở giữa web
