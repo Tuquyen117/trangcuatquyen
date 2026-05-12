@@ -160,14 +160,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card" data-project="greenbag">
+                    <div class="project-card" data-project="Vẽ Tranh">
                         <div class="project-image-wrapper">
-                            <img src="tui giay.jpg" alt="GreenBag" class="project-image">
+                            <img src="art.jpg" alt="Vẽ Tranh" class="project-image">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-name">GreenBag - Thiết Kế Túi Giấy Thân Thiện Môi Trường</h3>
+                            <h3 class="project-name">Vẽ Tranh & Sáng Tạo Nghệ Thuật</h3>
                             <p class="project-description">
-                                Thiết kế bộ nhận diện và mẫu túi giấy mang phong cách hiện đại, tối giản và thân thiện môi trường.
+                                Thường xuyên luyện tập phác thảo, phối màu và xây dựng ý tưởng hình ảnh nhằm nâng cao tư duy thẩm mỹ trong thiết kế đồ họa.
+                                Từng tham gia cuộc thi vẽ tranh tại Ho Chi Minh City, qua đó học hỏi thêm về cách truyền tải thông điệp và cảm xúc qua hình ảnh nghệ thuật. Việc vẽ tranh không chỉ là sở thích mà còn giúp phát triển khả năng quan sát, sáng tạo và tư duy bố cục trong lĩnh vực đồ họa kỹ thuật số.
                             </p>
                             <div class="project-tags">
                                 <span class="tag">Thiết Kế</span>
@@ -240,7 +241,7 @@
             <div class="container">
                 <h2 class="section-title">Sở Thích & Đam Mê</h2>
                 <div class="interests-grid">
-                    <div class="interest-item" data-interest="tranh">
+                    <div class="interest-item" data-interest="tranh" onclick="openInterestModal('tranh')">
                         <div class="interest-image-wrapper">
                             <img src="tranh.jpg" alt="Vẽ Tranh & Thiết Kế" class="interest-image">
                         </div>
@@ -512,6 +513,15 @@
             }
         };
 
+        // Interest Modal Data
+        const interestData = {
+            'tranh': {
+                title: 'Vẽ Tranh & Thiết Kế',
+                image: 'tranh.jpg',
+                description: 'Tôi yêu thích việc sáng tạo nghệ thuật qua việc vẽ tranh và thiết kế. Đây là cách tôi thể hiện sự sáng tạo, tưởng tượng và đam mê với nghệ thuật số. Mỗi bức tranh là một câu chuyện, mỗi thiết kế là một ý tưởng được hiện thực hóa.'
+            }
+        };
+
         // Modal Functions
         function openTimelineModal(year) {
             const data = timelineData[year];
@@ -536,6 +546,16 @@
             document.getElementById('projectModalTags').innerHTML = tagsHtml;
             
             document.getElementById('projectModal').classList.add('active');
+        }
+
+        function openInterestModal(interestId) {
+            const data = interestData[interestId];
+            if (!data) return;
+
+            document.getElementById('interestModalTitle').textContent = data.title;
+            document.getElementById('interestModalImage').src = data.image;
+            document.getElementById('interestModalDescription').textContent = data.description;
+            document.getElementById('interestModal').classList.add('active');
         }
 
         function closeModal(modalId) {
