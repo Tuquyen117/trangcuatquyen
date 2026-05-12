@@ -1,7 +1,7 @@
 # Portfolio - Trương Hà Tú Quyên
 
 ## 🌟 Giới Thiệu
-Đây là một website portfolio chuyên nghiệp hiện đại dành cho Trương Hà Tú Quyên, chuyên gia về Đồ họa Kỹ thuật số. Portfolio được thiết kế với các animations kiểu Apple, hỗ trợ Dark/Light theme, responsive design tối ưu, và được phát triển bằng HTML5, CSS3, JavaScript với hỗ trợ AI.
+Đây là một website portfolio của Trương Hà Tú Quyên, sinh viên về Đồ họa Kỹ thuật số. Portfolio được thiết kế với các animations kiểu Apple, hỗ trợ Dark/Light theme, responsive design tối ưu, và được phát triển bằng HTML5, CSS3, JavaScript với hỗ trợ AI.
 
 ## ✨ Tính Năng Nổi Bật
 
