@@ -276,52 +276,205 @@ main {
 ========================= */
 
 .hero {
-    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 32px;
     margin-bottom: 60px;
-    padding: 60px 20px;
+    padding: 80px 24px;
     scroll-margin-top: 120px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(236, 72, 153, 0.18);
+    box-shadow: 0 18px 50px rgba(236, 72, 153, 0.08);
+}
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+
+.hero::before {
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.08), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.08), transparent 30%);
+}
+
+.hero::after {
+    left: 50%;
+    bottom: -25%;
+    width: 120%;
+    height: 120%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.14), transparent 40%);
+    filter: blur(80px);
+}
+
+.hero-avatar-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 24px;
+}
+
+.hero-avatar-ring,
+.hero-avatar {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+}
+
+.hero-avatar-ring {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.18), transparent 55%);
+    box-shadow: 0 0 0 8px rgba(236, 72, 153, 0.1), 0 0 30px rgba(236, 72, 153, 0.25);
+    animation: pulse-ring 2.8s ease-in-out infinite;
+}
+
+.hero-avatar {
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 35px rgba(236, 72, 153, 0.2);
+}
+
+.hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes pulse-ring {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.04);
+        opacity: 0.8;
+    }
 }
 
 [data-theme="dark"] .hero {
-    background: rgba(31, 41, 55, 0.8);
-    border-color: rgba(75, 85, 99, 0.3);
+    background: rgba(31, 41, 55, 0.82);
+    border-color: rgba(236, 72, 153, 0.18);
+    box-shadow: 0 18px 50px rgba(236, 72, 153, 0.16);
 }
 
-.hero-content {
-    max-width: 700px;
+[data-theme="dark"] .hero::before {
+    background: radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.06), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.06), transparent 30%);
+}
+
+[data-theme="dark"] .hero::after {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.1), transparent 40%);
+}
+
+.hero-decor-left {
+    top: 28px;
+    left: -60px;
+    animation-delay: 0s;
+}
+
+.hero-decor-right {
+    bottom: 40px;
+    right: -60px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-18px) scale(1.05);
+    }
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-copy {
+    text-align: left;
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    margin-bottom: 18px;
+    color: #ec4899;
+    text-shadow: 0 14px 30px rgba(236, 72, 153, 0.25);
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 600;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
+    font-size: clamp(1.2rem, 3vw, 1.9rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
 }
 
 .hero-description {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 40px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.hero-tags span {
+    background: rgba(255, 255, 255, 0.45);
+    color: var(--text-primary);
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-tags span:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="dark"] .hero {
+    background: radial-gradient(circle at top, rgba(255, 191, 116, 0.22), transparent 24%),
+        radial-gradient(circle at 90% 20%, rgba(249, 115, 22, 0.12), transparent 20%),
+        linear-gradient(180deg, #111827 0%, #1f2937 28%, #4b5563 64%, #0f172a 100%);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .hero::before,
+[data-theme="dark"] .hero::after {
+    mix-blend-mode: normal;
+}
+
+[data-theme="dark"] .hero-tags span {
+    background: rgba(15, 23, 42, 0.75);
+    color: #f8fafc;
+    border-color: rgba(148, 163, 184, 0.15);
 }
 
 /* =========================
@@ -338,10 +491,30 @@ section {
     font-weight: 800;
     margin-bottom: 40px;
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ec4899;
+    text-shadow: 0 8px 20px rgba(236, 72, 153, 0.15);
+}
+
+.section-title::after {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 4px;
+    margin-top: 18px;
+    border-radius: 999px;
+    background: #ec4899;
+}
+
+.page-section {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(236, 72, 153, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(236, 72, 153, 0.08);
+}
+
+[data-theme="dark"] .page-section {
+    background: rgba(31, 41, 55, 0.82);
+    border-color: rgba(236, 72, 153, 0.18);
 }
 
 /* =========================

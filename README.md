@@ -48,27 +48,25 @@ Chương trình AI in Graphic Design được xây dựng nhằm giúp Designer 
 hình ảnh là ps.jpg
 hình ảnh 3 khung nằm ở bên trái, thông tin ở bên phải khi được nhấn vào khung lớn.
 -Tạo 1 cái background cho người thích vẽ tranh, thích về màu sắc và phải chỉnh những lỗi nhỏ, làm 1 trang web chuyên nghiệp
-## 🔧 Tính năng kỹ thuật chính
-
-- Lưu theme người dùng với `localStorage`
-- Scroll reveal animation bằng `IntersectionObserver`
-- Modal popup cho dự án và timeline
-- Parallax effect hero section
-- Validation form liên hệ
-
-## 📁 Cấu trúc dự án
-
-- `index.html` - Trang web chính
-- `styles.css` - Toàn bộ phần style và animation
-- Hình ảnh: `VRChat.jpg`, `game3d.jpg`, `art.jpg`, `tranh.jpg`, `truyen.jpg`, `it.webp`, `code.png`, `giới-thiệu.jpg`, `hinh3d.png`
-
-## 🚀 Cách chạy
-
-1. Mở `index.html` bằng trình duyệt.
-2. Hoặc dùng Live Server trong VS Code.
 
 ## 📌 Ghi chú
 
 - Hiện tại trang là bản demo portfolio tĩnh, chưa kết nối backend.
 - Form liên hệ chỉ hiển thị thông báo thành công, chưa gửi dữ liệu thật.
 - Có thể mở rộng thêm phần dự án, liên kết mạng xã hội và thông tin cá nhân.
+Giải thích 
+Behance
+ = nơi đăng bài thiết kế đẹp như “album tác phẩm”
+→ giống Facebook nhưng dành cho dân thiết kế/vẽ tranh.
+Dribbble
+ = nơi đăng ảnh thiết kế ngắn gọn, xịn xịn
+→ kiểu khoe UI, logo, poster, web…
+LinkedIn
+ = Facebook cho công việc
+→ để làm hồ sơ nghề nghiệp, tìm việc, kết nối công ty.
+
+Ví dụ:
+
+Bạn vẽ tranh → đăng Behance
+Bạn làm giao diện web/UI → đăng Dribbble
+Bạn muốn xin việc ngành đồ họa → dùng LinkedIn
